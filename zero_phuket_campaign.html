@@ -59,7 +59,7 @@
 </head>
 <body>
   <div style="margin-bottom: 24px; border-bottom: 2px solid #fff; padding-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-end;">
-    <div>
+    <div style="padding-bottom: 3px;">
       <div style="font-size: 18px; font-weight: 700; color: #fff; text-transform: uppercase; margin-bottom: 4px; letter-spacing: -0.3px;">The Zero Phuket — Campaign Overview</div>
       <div style="font-size: 12.1px; color: #555;">Click any video to expand full details &nbsp;·&nbsp; Phase 1 Content Strategy</div>
     </div>
@@ -333,17 +333,35 @@
     <!-- AUDIENCE TARGETING -->
     <div style="background: #161616; border: 0.5px solid #2a2a2a; border-radius: 10px; padding: 16px;">
       <div style="font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.8px; color: #666; margin-bottom: 12px;">Audience targeting</div>
-      <div style="margin-bottom: 12px;">
-        <div style="font-size: 10px; font-weight: 500; color: #5aadee; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px;">Cold — new people</div>
-        <div style="font-size: 11px; color: #bbb; line-height: 1.8;">01 — I live in Phuket 8 years<br>02 — Bang Tao or Nai Yang?<br>04 — Nai Yang is not for everyone<br>05 — Cheapest condo ≠ best deal<br>06 — Rent against 300 owners?<br>11 — Please don't buy The Zero if…</div>
+      <!-- Cold accordion -->
+      <div class="aud-acc" onclick="toggleAud(this)" style="background: #1e1e1e; border: 0.5px solid #2a2a2a; border-radius: 6px; padding: 8px 10px; margin-bottom: 6px; cursor: pointer; user-select: none; transition: border-color 0.15s, background 0.15s;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div style="font-size: 10px; font-weight: 500; color: #5aadee; text-transform: uppercase; letter-spacing: 0.6px;">Cold — new people</div>
+          <div class="aud-arrow" style="font-size: 10px; color: #555; transition: transform 0.2s;">▾</div>
+        </div>
+        <div class="aud-detail" style="display: none; margin-top: 8px; border-top: 0.5px solid #2a2a2a; padding-top: 8px; font-size: 11px; color: #bbb; line-height: 1.8;">
+          01 — I live in Phuket 8 years<br>02 — Bang Tao or Nai Yang?<br>04 — Nai Yang is not for everyone<br>05 — Cheapest condo ≠ best deal<br>06 — Rent against 300 owners?<br>11 — Please don't buy The Zero if…
+        </div>
       </div>
-      <div style="margin-bottom: 12px; border-top: 0.5px solid #222; padding-top: 12px;">
-        <div style="font-size: 10px; font-weight: 500; color: #e6a817; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px;">Warm — watched, clicked, visited</div>
-        <div style="font-size: 11px; color: #bbb; line-height: 1.8;">07 — ROI can look good on paper<br>08 — Renders sell dreams<br>09 — Before a buyer reserves<br>10 — What if you don't sell?<br>12 — Part buyers never see<br>13 — I'd choose the goal first</div>
+      <!-- Warm accordion -->
+      <div class="aud-acc" onclick="toggleAud(this)" style="background: #1e1e1e; border: 0.5px solid #2a2a2a; border-radius: 6px; padding: 8px 10px; margin-bottom: 6px; cursor: pointer; user-select: none; transition: border-color 0.15s, background 0.15s;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div style="font-size: 10px; font-weight: 500; color: #e6a817; text-transform: uppercase; letter-spacing: 0.6px;">Warm — watched, clicked, visited</div>
+          <div class="aud-arrow" style="font-size: 10px; color: #555; transition: transform 0.2s;">▾</div>
+        </div>
+        <div class="aud-detail" style="display: none; margin-top: 8px; border-top: 0.5px solid #2a2a2a; padding-top: 8px; font-size: 11px; color: #bbb; line-height: 1.8;">
+          07 — ROI can look good on paper<br>08 — Renders sell dreams<br>09 — Before a buyer reserves<br>10 — What if you don't sell?<br>12 — Part buyers never see<br>13 — I'd choose the goal first
+        </div>
       </div>
-      <div style="border-top: 0.5px solid #222; padding-top: 12px;">
-        <div style="font-size: 10px; font-weight: 500; color: #3dba6f; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px;">Hot — messaged, opened forms</div>
-        <div style="font-size: 11px; color: #bbb; line-height: 1.8;">14 — Zero Bang Tao is for this buyer<br>15 — Silhouette is for this buyer<br>16 — Send your goal, not your budget</div>
+      <!-- Hot accordion -->
+      <div class="aud-acc" onclick="toggleAud(this)" style="background: #1e1e1e; border: 0.5px solid #2a2a2a; border-radius: 6px; padding: 8px 10px; margin-bottom: 6px; cursor: pointer; user-select: none; transition: border-color 0.15s, background 0.15s;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div style="font-size: 10px; font-weight: 500; color: #3dba6f; text-transform: uppercase; letter-spacing: 0.6px;">Hot — messaged, opened forms</div>
+          <div class="aud-arrow" style="font-size: 10px; color: #555; transition: transform 0.2s;">▾</div>
+        </div>
+        <div class="aud-detail" style="display: none; margin-top: 8px; border-top: 0.5px solid #2a2a2a; padding-top: 8px; font-size: 11px; color: #bbb; line-height: 1.8;">
+          14 — Zero Bang Tao is for this buyer<br>15 — Silhouette is for this buyer<br>16 — Send your goal, not your budget
+        </div>
       </div>
       <div style="border-top: 0.5px solid #222; padding-top: 12px; margin-top: 12px;">
         <div style="font-size: 10px; font-weight: 500; color: #666; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px;">Weekly objectives</div>
@@ -390,6 +408,15 @@
       const isActive = el.classList.contains('active');
       document.querySelectorAll('.vid.active').forEach(v => v.classList.remove('active'));
       if (!isActive) el.classList.add('active');
+    }
+    function toggleAud(el) {
+      const detail = el.querySelector('.aud-detail');
+      const arrow = el.querySelector('.aud-arrow');
+      const isOpen = detail.style.display === 'block';
+      detail.style.display = isOpen ? 'none' : 'block';
+      arrow.style.transform = isOpen ? '' : 'rotate(180deg)';
+      el.style.borderColor = isOpen ? '#2a2a2a' : '#555';
+      el.style.background = isOpen ? '#1e1e1e' : '#242424';
     }
   </script>
 </body>
